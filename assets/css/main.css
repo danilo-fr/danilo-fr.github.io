@@ -3790,3 +3790,8 @@ input, select, textarea {
 			}
 
 		}
+
+	.main {
+	background: rgba(10, 15, 30, 0.85); /* azul escuro astronômico */
+	border-radius: 8px;
+	}
