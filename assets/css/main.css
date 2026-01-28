@@ -100,14 +100,13 @@ input, select, textarea {
 
 	body {
 	background-color: #000;
-	background-image:
-		url("../images/overlay.png"),
-		url("../images/v1371tau.png");
-	background-size: auto, cover;
-	background-position: center, center;
-	background-repeat: repeat, no-repeat;
+	background-image: url("../images/v1371tau.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	background-attachment: fixed;
 	}
+
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
@@ -124,14 +123,13 @@ input, select, textarea {
 
 	body {
 	background-color: #000;
-	background-image:
-		url("../images/overlay.png"),
-		url("../images/v1371tau.png");
-	background-size: auto, cover;
-	background-position: center, center;
-	background-repeat: repeat, no-repeat;
+	background-image: url("../images/v1371tau.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	background-attachment: fixed;
 	}
+
 
 	body, input, select, textarea {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
