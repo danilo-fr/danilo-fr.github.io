@@ -3510,3 +3510,8 @@ input, select, textarea {
 			}
 
 	}
+
+body {
+  background: url("assets/css/images/v1371tau.png") center / cover no-repeat fixed;
+}
+
