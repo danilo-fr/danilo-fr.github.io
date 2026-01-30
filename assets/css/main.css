@@ -2917,7 +2917,8 @@ input, select, textarea {
 		background-color: #4686a0;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
+		/*background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);*/
+		background-image: url("../../images/v1371tau.png");
 		background-position: top left,						center center,					center center;
 		background-size: auto,							cover,							cover;
 		overflow: hidden;
@@ -3510,18 +3511,3 @@ input, select, textarea {
 			}
 
 	}
-
-html, body {
-  height: 100%;
-}
-
-#wrapper,
-#page-wrapper,
-#main {
-  background: transparent !important;
-}
-
-html {
-  background: url("../../images/v1371tau.png") center / cover no-repeat fixed;
-}
-
