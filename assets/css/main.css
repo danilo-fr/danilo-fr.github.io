@@ -3510,3 +3510,18 @@ input, select, textarea {
 			}
 
 	}
+
+html, body {
+  height: 100%;
+}
+
+#wrapper,
+#page-wrapper,
+#main {
+  background: transparent !important;
+}
+
+html {
+  background: url("../../images/v1371tau.png") center / cover no-repeat fixed;
+}
+
