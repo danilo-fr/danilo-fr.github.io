@@ -3515,3 +3515,6 @@ body {
   background: url("../../images/v1371tau.png") center / cover no-repeat fixed;
 }
 
+#wrapper {
+  background: transparent;
+}
