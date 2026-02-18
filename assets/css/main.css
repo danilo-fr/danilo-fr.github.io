@@ -2912,15 +2912,16 @@ input, select, textarea {
 
 /* Header */
 
-	#header {
-		padding: 9em 0 9em 0 ;
+		#header {
+		padding: 9em 0;
 		background-color: #4686a0;
 		color: rgba(255, 255, 255, 0.75);
-		background-attachment: fixed,							fixed,							fixed;
-		/*background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);*/
+
 		background-image: url("../../images/v1371tau.png");
-		background-position: top left,						center center,					center center;
-		background-size: auto,							cover,							cover;
+		background-position: center center;   /* centraliza */
+		background-size: cover;               /* cobre toda a área */
+		background-repeat: no-repeat;         /* evita repetição */
+
 		overflow: hidden;
 		position: relative;
 		text-align: center;
@@ -3109,16 +3110,19 @@ input, select, textarea {
 
 /* Footer */
 
-	#footer {
-		padding: 6em 0 6em 0 ;
+		#footer {
+		padding: 6em 0;
 		background-color: #4686a0;
 		color: rgba(255, 255, 255, 0.75);
-		background-attachment: fixed,							fixed,							fixed;
+
 		background-image: url("../../images/v1371tau.png");
-		background-position: top left,						center center,					center center;
-		background-size: auto,							cover,							cover;
+		background-position: center center;   /* centraliza */
+		background-size: cover;               /* adapta ao tamanho da tela */
+		background-repeat: no-repeat;
+
 		text-align: center;
 	}
+
 
 		#footer a {
 			border-bottom-color: rgba(255, 255, 255, 0.5);

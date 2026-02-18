@@ -48,22 +48,116 @@
 				<div class="container">
 					<div class="row gtr-150">
 						<div class="col-6 col-12-medium">
-							<ul class="major-icons">
-								<li><span class="icon solid style1 major fa-code"></span></li>
-								<li><span class="icon solid style2 major fa-bolt"></span></li>
-								<li><span class="icon solid style3 major fa-camera-retro"></span></li>
-								<li><span class="icon solid style4 major fa-cog"></span></li>
-								<li><span class="icon solid style5 major fa-desktop"></span></li>
-								<li><span class="icon solid style6 major fa-calendar"></span></li>
-							</ul>
-						</div>
+    <ul class="major-icons custom-images">
+        <li>
+            <img src="images/wd1_hr.jpg" alt="Figura 1" class="img1">
+        </li>
+        <li>
+            <img src="images/TIC74386000_ecl.jpg" alt="Figura 2" class="img2">
+        </li>
+        <li>
+            <img src="images/wavelet_tic74386000.jpg" alt="Figura 3" class="img3">
+        </li>
+    </ul>
+</div>
+
+<style>
+.custom-images {
+    padding: 0;
+    margin: 0;
+}
+
+.custom-images li {
+    list-style: none;
+    margin-bottom: 25px; /* espaço entre as imagens */
+    text-align: center;  /* centraliza */
+}
+
+/* Controle individual de tamanho */
+.img1 {
+    width: 100%;
+    height: auto; /* mantém proporção */
+}
+
+.img2 {
+    width: 100%;
+    height: auto;
+}
+
+.img3 {
+    width: 100%;
+    height: auto;
+}
+</style>
+
+
 						<div class="col-6 col-12-medium">
 							<header class="major">
 								<h2> Research Interests </h2>
 							</header>
-							<p>During my Master’s and PhD research, I worked on OB and OBe stars using large photometric datasets, mainly from the TESS mission, combined with spectroscopic observations to identify stellar companions and constrain orbital parameters. This research provided strong experience in collaborative, data-driven projects and in interpreting results within the framework of stellar evolution and angular momentum transport. I made extensive use of the Wilson–Devinney code for binary star modeling, developing a Python interface to the original Fortran implementation coupled with the emcee package for robust parameter estimation. In addition, I developed Python tools to measure radial velocities, derive stellar atmospheric parameters, process and analyze TESS photometric data, and construct Hertzsprung–Russell diagrams.</p>
-							<p>A significant part of my work focused on the massive eclipsing binary W36, for which I performed a detailed photometric and spectroscopic analysis to determine its orbital and physical properties. By modeling the system with the Wilson–Devinney code combined with MCMC techniques, we derived precise stellar masses, effective temperatures, and an age estimate for the massive cluster Westerlund 1 of approximately 5–12 million years, providing strong constraints on its recent star formation history.</p>
-							<p>I also investigated the hierarchical triple system V1371 Tau, composed of an inner eclipsing binary and an outer classical Be star. Using TESS photometry, multi-epoch spectroscopy, and interferometric data, I confirmed its hierarchical configuration and characterized both the inner and outer orbits. The analysis showed that the Be star is a fast rotator with a projected rotational velocity of about 250 km/s and hosts a Keplerian circumstellar disk with weak H-alpha emission. The system presents evidence of dynamical interactions, possibly including Kozai–Lidov cycles, affecting the inclination of the inner binary, offering valuable observational insight into the dynamics and evolution of massive multiple systems with rapidly rotating components.</p>
+							<section>
+
+    <p>
+        My research interests covers all observational domains of massive-star physics, 
+        from their cores to their environments, as well as space instrumentation:
+    </p>
+
+    <ul>
+        <li>
+            <strong>Massive stars:</strong> Seismology (pulsations), rotation, mixing, and internal structure.
+        </li>
+	<li>
+            <strong>Binary and multiple systems:</strong> Orbital dynamics, eclipsing binaries, hierarchical triples, dynamical interactions (e.g., Kozai–Lidov cycles), and stellar parameter determination.
+        </li>
+        <li>
+            <strong>Be phenomenon:</strong> Mass ejections, circumstellar disks and clouds, angular momentum transport.
+        </li>
+        <li>
+            <strong>Techniques:</strong> Spectroscopy and photometry across all wavelengths (IR, optical, UV, and X-ray), observations and modelling.
+        </li>
+	<li>
+            <strong>Scientific programming and computational modeling:</strong> 
+Development of Python tools for photometric and spectroscopic analysis, including a custom interface to the Wilson–Devinney code with emcee for parameter estimation, as well as spectral modeling and radial velocity extraction in binary and multiple stellar systems.
+        </li>
+    </ul>
+
+    <h2>Selected Publications</h2>
+
+    <ul>
+    <li>
+        Rocha, D. F. et al. (2026).
+        <em>The Triple System V1371 Tau: An Eclipsing Binary with an Outer Be Star.</em>
+        ApJ, 996, 61. DOI: <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae1d57" target="_blank"> 10.3847/1538-4357/ae1d57</a>
+    </li>
+
+    <li>
+        Kokori, A. et al., including Rocha, D. F. (2026).
+        <em>ExoClock Project IV: A homogeneous catalogue of 620 updated exoplanet ephemerides.</em>
+        ApJS, 283, 5. DOI: <a href="https://iopscience.iop.org/article/10.3847/1538-4365/ae3238" target="_blank"> 10.3847/1538-4365/ae3238</a>
+    </li>
+
+    <li>
+        Sana, H. et al., including Rocha, D. F. (2025).
+        <em>A high fraction of close massive binary stars at low metallicity.</em>
+        Nature Astronomy, 9, 1337–1346. DOI: <a href="https://doi.org/10.1038/s41550-025-02610-x" target="_blank"> 10.1038/s41550-025-02610-x</a>
+    </li>
+
+    <li>
+        Shenar, T. et al., including Rocha, D. F. (2024).
+        <em>Binarity at LOw Metallicity (BLOeM): A spectroscopic VLT monitoring survey of massive stars in the SMC.</em>
+        A&amp;A, 690, A289. DOI: <a href="https://doi.org/10.1051/0004-6361/202451586" target="_blank"> 10.1051/0004-6361/202451586</a>
+    </li>
+
+    <li>
+        Rocha, D. F. et al. (2022).
+        <em>Distance and age of the massive stellar cluster Westerlund 1–II: The eclipsing binary W36.</em>
+        MNRAS, 517(3), 3749–3762. DOI: <a href="https://doi.org/10.1093/mnras/stac2927" target="_blank"> 10.1093/mnras/stac2927</a>
+    </li>
+</ul>
+
+
+
+
 						</div>
 					</div>
 				</div>
@@ -71,39 +165,255 @@
 
 		<!-- Three -->
 			<section id="three" class="main style1 special">
-				<div class="container">
-					<header class="major">
-						<h2>Outreach</h2>
-					</header>
-					<p>Since I began studying science, especially astronomy, I have had a deep motivation to share my enthusiasm for the cosmos. My first experiences in science outreach involved presenting physics experiments, operating telescopes and planetariums, bringing knowledge to the most isolated cities of Alagoas, Brazil, to children, young people, adults, and the elderly.</p>
-					<div class="row gtr-150">
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pic02.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pic03.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
+	<div class="container">
+		
+		<header class="major">
+			<h2>Outreach</h2>
+		</header>
+
+		<!-- TEXTO + FOTO -->
+		<div class="row gtr-150 outreach-top">
+			
+			<div class="col-8 col-12-medium outreach-text">
+				<p>
+					My journey in science outreach began in the countryside of Alagoas, Brazil,
+					where I traveled to underserved communities presenting physics experiments,
+					operating telescopes and planetariums, and promoting astronomy education
+					for students of all ages.
+				</p>
+
+				<p>
+					Over the years, I became actively involved with national initiatives such as
+					the Brazilian Astronomy and Astronautics Olympiad (OBA), teacher training
+					programs, and international astronomy collaborations. Currently, as a Ph.D.
+					candidate at Observatório Nacional, I continue connecting cutting-edge
+					astrophysics research with society through lectures, workshops, and public engagement.
+				</p>
+
+				<p>
+					🔗 <a href="LINK_DA_MATERIA_ON" target="_blank">
+					Observatório Nacional – News about my work</a><br>
+
+					🎥 <a href="LINK_DO_YOUTUBE" target="_blank">
+					YouTube – Outreach activity / interview</a>
+				</p>
+			</div>
+
+			<div class="col-4 col-12-medium">
+				<span class="image fit">
+					<img src="images/me3.png" alt="Photo during outreach activity" class="profile-pic"/>
+				</span>
+			</div>
+
+		</div>
+
+		<hr class="divider" />
+
+		<h3>Outreach Gallery</h3>
+
+		<!-- CARROSSEL -->
+		<div class="carousel-container" id="carousel">
+			<button class="carousel-btn prev">&#10094;</button>
+
+			<div class="carousel-track" id="carouselTrack">
+				<img src="images/outreach/me.png" onclick="openModal(this)">
+				<img src="images/outreach/me1.png" onclick="openModal(this)">
+				<img src="images/outreach/me2.png" onclick="openModal(this)">
+				<img src="images/outreach/me3.png" onclick="openModal(this)">
+				<img src="images/outreach/me4.png" onclick="openModal(this)">
+				<img src="images/outreach/me5.png" onclick="openModal(this)">
+				<img src="images/outreach/me6.png" onclick="openModal(this)">
+				<img src="images/outreach/me7.png" onclick="openModal(this)">
+			</div>
+
+			<button class="carousel-btn next">&#10095;</button>
+		</div>
+
+	</div>
+</section>
+
+<!-- MODAL -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="modalImg">
+</div>
+
+<style>
+
+/* ---------- TOP SECTION ---------- */
+
+.outreach-top {
+	align-items: center;
+}
+
+.outreach-text {
+	text-align: left;
+}
+
+.profile-pic {
+	border-radius: 12px;
+	box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+	transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+	transform: scale(1.03);
+}
+
+.divider {
+	margin: 3em 0;
+}
+
+/* ---------- CAROUSEL ---------- */
+
+.carousel-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	margin-top: 2em;
+}
+
+.carousel-track {
+	display: flex;
+	gap: 20px;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+.carousel-track img {
+	height: 220px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	flex-shrink: 0;
+}
+
+.carousel-track img:hover {
+	transform: scale(1.05);
+	box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.carousel-btn {
+	position: absolute;
+	background: rgba(0,0,0,0.6);
+	color: white;
+	border: none;
+	font-size: 30px;
+	padding: 10px 15px;
+	cursor: pointer;
+	border-radius: 50%;
+	z-index: 2;
+	transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+	background: rgba(0,0,0,0.85);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ---------- MODAL ---------- */
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+	display: block;
+	margin: 5% auto;
+	max-width: 80%;
+	max-height: 80%;
+	border-radius: 12px;
+}
+
+.close {
+	position: absolute;
+	top: 30px;
+	right: 50px;
+	color: white;
+	font-size: 40px;
+	cursor: pointer;
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 768px) {
+	.carousel-track img {
+		height: 160px;
+	}
+}
+
+</style>
+
+<script>
+
+/* ---------- CAROUSEL ---------- */
+
+const track = document.getElementById('carouselTrack');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+const carousel = document.getElementById('carousel');
+
+let scrollAmount = 0;
+let autoPlayInterval;
+
+/* DUPLICA IMAGENS PARA LOOP INFINITO */
+track.innerHTML += track.innerHTML;
+
+function autoPlay() {
+	autoPlayInterval = setInterval(() => {
+		scrollAmount += 1;
+		track.scrollLeft = scrollAmount;
+
+		if (scrollAmount >= track.scrollWidth / 2) {
+			scrollAmount = 0;
+		}
+	}, 20); // velocidade (menor = mais rápido)
+}
+
+function stopAutoPlay() {
+	clearInterval(autoPlayInterval);
+}
+
+nextBtn.addEventListener('click', () => {
+	scrollAmount += 300;
+});
+
+prevBtn.addEventListener('click', () => {
+	scrollAmount -= 300;
+});
+
+carousel.addEventListener('mouseenter', stopAutoPlay);
+carousel.addEventListener('mouseleave', autoPlay);
+
+autoPlay();
+
+/* ---------- MODAL ---------- */
+
+function openModal(img) {
+	const modal = document.getElementById("imgModal");
+	const modalImg = document.getElementById("modalImg");
+	modal.style.display = "block";
+	modalImg.src = img.src;
+	stopAutoPlay();
+}
+
+function closeModal() {
+	document.getElementById("imgModal").style.display = "none";
+	autoPlay();
+}
+
+</script>
+
 
 		<!-- Four -->
 			<section id="four" class="main style2 special">
