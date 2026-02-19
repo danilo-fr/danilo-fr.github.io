@@ -30,14 +30,16 @@
 			<section id="one" class="main style1">
 				<div class="container">
 					<div class="row gtr-150">
-						<div class="col-6 col-12-medium">
+						<div class="col-7 col-12-medium">
 							<header class="major">
 								<h2>About me</h2>
 							</header>
 							<p>My name is Danilo Ferreira, and I am currently a postdoctoral researcher at the Laboratório Nacional de Astrofísica (LNA), Brazil. I work in observational stellar astrophysics, with a focus on massive stars, particularly Be stars and hierarchical multiple systems, using photometric, spectroscopic, and interferometric data in the optical and near-infrared. I hold a PhD in Astronomy from the Observatório Nacional (2025), including a research internship at the Observatoire de Paris (2024), as well as an MSc in Astrophysics and a BSc in Physics. Alongside research, I am actively involved in science outreach and education. Outside academia, I enjoy listening to music (MPB and Brazilian rock), going to the beach, and playing electronic games.</p>
 						</div>
-						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="images/me.jpeg" alt="" style="width: 400px;" /></span>
+						<div class="col-5 col-12-medium imp-medium">
+							<span class="image fit">
+								<img src="images/me.jpeg" alt="My photo" class="zoom-img">
+							</span>
 						</div>
 					</div>
 				</div>
@@ -156,8 +158,6 @@ Development of Python tools for photometric and spectroscopic analysis, includin
 </ul>
 
 
-
-
 						</div>
 					</div>
 				</div>
@@ -245,14 +245,30 @@ Development of Python tools for photometric and spectroscopic analysis, includin
 </section>
 
 <!-- MODAL -->
-<div id="imgModal" class="modal" onclick="closeModal()">
-	<span class="close">&times;</span>
+<div id="imgModal" class="modal">
+	<span class="close" onclick="closeModal()">&times;</span>
+
+	<button class="modal-btn prev-modal">&#10094;</button>
 	<img class="modal-content" id="modalImg">
+	<button class="modal-btn next-modal">&#10095;</button>
 </div>
 
 <style>
 
 /* ---------- TOP SECTION ---------- */
+
+.zoom-img {
+	max-width: 350px;
+	width: 100%;
+	border-radius: 12px;
+	box-shadow: 20px 10px 25px rgba(0,0,0,0.25);
+	transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.zoom-img:hover {
+	transform: scale(1.05);
+	box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
 
 .outreach-top {
 	align-items: center;
@@ -289,8 +305,13 @@ Development of Python tools for photometric and spectroscopic analysis, includin
 .carousel-track {
 	display: flex;
 	gap: 20px;
-	overflow-x: hidden;
+	overflow-x: auto;
 	scroll-behavior: smooth;
+	scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+	display: none;
 }
 
 .carousel-track img {
@@ -356,6 +377,30 @@ Development of Python tools for photometric and spectroscopic analysis, includin
 	cursor: pointer;
 }
 
+/* BOTÕES DO MODAL */
+
+.modal-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0,0,0,0.6);
+	color: white;
+	border: none;
+	font-size: 40px;
+	padding: 10px 18px;
+	cursor: pointer;
+	border-radius: 50%;
+	z-index: 10000;
+	transition: background 0.3s ease;
+}
+
+.modal-btn:hover {
+	background: rgba(0,0,0,0.85);
+}
+
+.prev-modal { left: 30px; }
+.next-modal { right: 30px; }
+
 /* ---------- RESPONSIVO ---------- */
 
 @media (max-width: 768px) {
@@ -366,63 +411,115 @@ Development of Python tools for photometric and spectroscopic analysis, includin
 
 </style>
 
+<!-- MODAL -->
+<div id="imgModal" class="modal">
+	<span class="close" onclick="closeModal()">&times;</span>
+
+	<button class="modal-btn prev-modal">&#10094;</button>
+	<img class="modal-content" id="modalImg">
+	<button class="modal-btn next-modal">&#10095;</button>
+</div>
+
 <script>
 
-/* ---------- CAROUSEL ---------- */
+let originalImages = [];
+let currentIndex = 0;
 
-const track = document.getElementById('carouselTrack');
-const nextBtn = document.querySelector('.next');
-const prevBtn = document.querySelector('.prev');
-const carousel = document.getElementById('carousel');
+window.onload = function() {
 
-let scrollAmount = 0;
-let autoPlayInterval;
+	const track = document.getElementById('carouselTrack');
+	const nextBtn = document.querySelector('.next');
+	const prevBtn = document.querySelector('.prev');
+	const carousel = document.getElementById('carousel');
 
-/* DUPLICA IMAGENS PARA LOOP INFINITO */
-track.innerHTML += track.innerHTML;
+	let autoPlayInterval;
+	let speed = 0.5;
 
-function autoPlay() {
-	autoPlayInterval = setInterval(() => {
-		scrollAmount += 1;
-		track.scrollLeft = scrollAmount;
+	originalImages = Array.from(track.querySelectorAll('img'));
 
-		if (scrollAmount >= track.scrollWidth / 2) {
-			scrollAmount = 0;
-		}
-	}, 20); // velocidade (menor = mais rápido)
-}
+	track.innerHTML += track.innerHTML;
 
-function stopAutoPlay() {
-	clearInterval(autoPlayInterval);
-}
+	track.scrollLeft = track.scrollWidth / 2;
 
-nextBtn.addEventListener('click', () => {
-	scrollAmount += 300;
-});
+	function startAutoPlay() {
+		autoPlayInterval = setInterval(() => {
 
-prevBtn.addEventListener('click', () => {
-	scrollAmount -= 300;
-});
+			track.scrollLeft += speed;
 
-carousel.addEventListener('mouseenter', stopAutoPlay);
-carousel.addEventListener('mouseleave', autoPlay);
+			if (track.scrollLeft >= track.scrollWidth - track.clientWidth) {
+				track.scrollLeft = track.scrollWidth / 2;
+			}
 
-autoPlay();
+		}, 10);
+	}
+
+	function stopAutoPlay() {
+		clearInterval(autoPlayInterval);
+	}
+
+	nextBtn.addEventListener('click', () => {
+		track.scrollBy({ left: 300, behavior: 'smooth' });
+	});
+
+	prevBtn.addEventListener('click', () => {
+		track.scrollBy({ left: -300, behavior: 'smooth' });
+	});
+
+	carousel.addEventListener('mouseenter', stopAutoPlay);
+	carousel.addEventListener('mouseleave', startAutoPlay);
+
+	startAutoPlay();
+};
 
 /* ---------- MODAL ---------- */
 
 function openModal(img) {
+
 	const modal = document.getElementById("imgModal");
 	const modalImg = document.getElementById("modalImg");
+
+	currentIndex = originalImages.findIndex(i => i.src === img.src);
+
 	modal.style.display = "block";
 	modalImg.src = img.src;
-	stopAutoPlay();
 }
 
 function closeModal() {
 	document.getElementById("imgModal").style.display = "none";
-	autoPlay();
 }
+
+function nextImage() {
+	currentIndex = (currentIndex + 1) % originalImages.length;
+	document.getElementById("modalImg").src = originalImages[currentIndex].src;
+}
+
+function prevImage() {
+	currentIndex = (currentIndex - 1 + originalImages.length) % originalImages.length;
+	document.getElementById("modalImg").src = originalImages[currentIndex].src;
+}
+
+document.addEventListener("click", function(e) {
+
+	if (e.target.classList.contains("next-modal")) {
+		nextImage();
+	}
+
+	if (e.target.classList.contains("prev-modal")) {
+		prevImage();
+	}
+});
+
+document.addEventListener("keydown", function(e) {
+
+	const modal = document.getElementById("imgModal");
+
+	if (modal.style.display === "block") {
+
+		if (e.key === "ArrowRight") nextImage();
+		if (e.key === "ArrowLeft") prevImage();
+		if (e.key === "Escape") closeModal();
+	}
+});
 
 </script>
 
