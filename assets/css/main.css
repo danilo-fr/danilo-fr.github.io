@@ -2927,6 +2927,30 @@ input, select, textarea {
 		text-align: center;
 	}
 
+	#header canvas{
+
+	    position:absolute;
+	
+	    left:0;
+	    top:0;
+	
+	    width:100%;
+	    height:100%;
+	
+	    z-index:1;
+	
+	    pointer-events:none;
+	
+	}
+	
+	#header .inner{
+	
+	    position:relative;
+	
+	    z-index:2;
+	
+	}
+
 		#header a {
 			border-bottom-color: rgba(255, 255, 255, 0.5);
 		}
