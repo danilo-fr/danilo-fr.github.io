@@ -6,5 +6,6 @@ height: 295px
 images:
   - src: /assets/images/outreach/me1.png
   - src: /assets/images/outreach/me2.png
+  - src: /assets/images/outreach/me3.png
 ---
 {% include widgets/carousel.html id=page.id images=page.images height=page.height %}
