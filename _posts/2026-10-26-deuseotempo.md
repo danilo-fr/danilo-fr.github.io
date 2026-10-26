@@ -1,0 +1,22 @@
+---
+layout: blog_post
+title: 'The Threshold between God and Time'
+date: 2026-10-26
+tags:
+  - Blog
+  - Post
+  - Science&Religion
+---
+
+<div style="text-align: center; margin-bottom: 24px;">
+  <img
+    src="{{ '/assets/images/posts/chronus.png' | relative_url }}"
+    alt=""
+    style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 12px;"
+  >
+</div>
+
+> Time is the metaphysical personification of God; we can neither do nor be anything without time. Only with time do we truly discover the intentions of those around us; with time, we can heal the wounds of the past, appreciate the details of the present, and look forward with hope to better days in the future.
+>> Growing takes time.
+>>> Know takes time.
+>>>> Loving takes time.

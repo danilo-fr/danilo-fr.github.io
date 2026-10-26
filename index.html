@@ -1,0 +1,66 @@
+---
+layout: default
+title : Homepage
+navbar_title: Home
+---
+
+<div class="row">
+    <div class="col-lg-3 col-md-4">
+        {% include widgets/profile_card_mini.html %}
+    </div>
+    <div class="col-lg-9 col-md-8">
+        
+        <div class="my-3 p-4 bg-white shadow-sm rounded-xl text-center">
+            <h4 class="mb-2">Olá, bem-vindo ao meu website! :) </h4>
+            <p class="mb-0 text-muted" style="font-size: 14px;">
+                Hello, welcome to my website!
+            </p>
+        </div>
+
+        {% include widgets/profile_card_bio_only.html %}
+
+        <!-- Debugging widgets -->
+        {% include widgets/debug_repo_name.html %}
+        {% include widgets/debug_url.html %}
+
+        {% if site.data.display.homepage.show_experience %}
+            {% include widgets/experience_card.html %}
+        {% endif %}
+
+            
+        {% if site.data.display.homepage.show_selected_publications %}
+            <div class="my-3 p-0 bg-white shadow-sm rounded-xl">
+                <h6 class="border-bottom border-gray p-3 mb-0">
+                    <i class="fas fa-file-alt"></i> Selected Publications
+                </h6>
+
+                {% for pub in site.data.recent_publications limit:2 %}
+                    {% include widgets/publication_card2.html
+                        title=pub.title
+                        authors=pub.authors
+                        journal=pub.journal
+                        year=pub.year
+                        doi=pub.doi
+                        image=pub.image
+                        first_author=forloop.first
+                        title_size="16px"
+                    %}
+                {% endfor %}
+
+                <h6 class="d-block p-3 mt-0 text-right">
+                    <a href="{{ 'publications' | relative_url }}">
+                        All publications <i class="fas fa-angle-double-right"></i>
+                    </a>
+                </h6>
+            </div>
+        {% endif %}
+
+        {% if site.data.display.homepage.show_news %}
+        {% assign count_news = site.news | size %}
+        {% if count_news > 0 %}
+        {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
+        {% endif %}
+        {% endif %}
+
+    </div>
+</div>

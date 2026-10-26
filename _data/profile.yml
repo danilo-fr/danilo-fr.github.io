@@ -1,0 +1,68 @@
+primary_name: "Danilo Ferreira da Rocha"
+secondary_name: ""
+navbar_name: "D. Rocha"
+
+positions:
+- name: PhD Fellow at LNA/Brazil #Title or Position
+- name: National Laboratory of Astrophysics
+  logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
+
+
+email: "drocha@lna.br"
+# cv_link: link-to-your-cv-file
+gscholar: krYTU7MAAAAJ&h  # This is an example, replace it with your own Google Scholar ID
+github: danilo-fr
+#twitter: your_twitter_id  # Do not include the '@' symbol
+# linkedin: your-linked-in-id
+orcid: 0000-0002-8225-7699
+lattes: "https://lattes.cnpq.br/3170434769675374"
+
+short_bio_text_justify: false
+short_bio: >-
+  <p>
+    My name is Danilo Ferreira, and I am currently a postdoctoral researcher at the Laboratório Nacional de Astrofísica (LNA), 
+    Brazil. I work in observational stellar astrophysics, with a focus on massive stars, particularly Be stars and hierarchical 
+    multiple systems, using photometric, spectroscopic, and interferometric data in the optical and near-infrared. 
+  <p>
+  <p>  
+    I hold a PhD 
+    in Astronomy from the Observatório Nacional (2025), including a research internship at the Observatoire de Paris (2024), as 
+    well as an MSc in Astrophysics and a BSc in Physics. Alongside research, I am actively involved in science outreach and education. 
+  <p>
+  <p>  
+    Outside academia, I enjoy listening to music (MPB and Brazilian rock), going to the beach, and playing electronic games.
+  </p>
+
+portrait_url: /assets/images/photos/me.jpeg
+portrait_caption: >-
+  Paris, 2024 🇫🇷 Winter memories from my internship at the Paris Observatory.
+
+education:
+- name: National Observatory/Brazil
+  logo: /assets/images/badges/on.png
+  position: >- 
+    Ph.D. in Astronomy <br>
+    Thesis: Be Stars in binary Systems
+  date: Ago. 2021 - Oct. 2025
+- name: Rio Grande do Norte State University
+  logo: /assets/images/badges/uern.png
+  position: M.Sc. in Physics
+  date: Ago. 2019 - Jul. 2021
+- name: Federal University of Alagoas
+  logo: /assets/images/badges/ufal.png
+  position: B.S. in Physics Education
+  date: Ago. 2013 - Jul. 2019
+
+experience:
+- name: National Laboratory of Astrophysics
+  logo: /assets/images/badges/lna.png
+  position: Posdoc - PCI Fellow
+  date: Nov. 2025 - Present
+
+awards:
+- name: PhD 10 Award, FAPERJ
+  date: 2023
+#- name: Award Name 1 
+#  date: 2021
+#- name: A quick brown fox jumps over the lazy dog and runs away award
+#  date: 2021
